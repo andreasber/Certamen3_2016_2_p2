@@ -2,6 +2,10 @@ package cl.telematica.android.certamen3_p2;
 
 import android.os.AsyncTask;
 
+import org.json.JSONObject;
+
+import static cl.telematica.android.certamen3_p2.Constants.CONNECTIONADDRESS;
+
 /**
  * Created by franciscocabezas on 11/18/16.
  */
@@ -17,7 +21,7 @@ public class MyAsyncTaskExecutor {
         return instance;
     }
 
-    public void executeMyAsynctask(final MainActivity.Listener listener, final String textToSend) {
+    public void executeMyAsynctask(final MainActivity.Listener listener, final JSONObject object) {
         AsyncTask<Void, Void, String> task = new AsyncTask<Void, Void, String>() {
 
             @Override
@@ -27,7 +31,9 @@ public class MyAsyncTaskExecutor {
 
             @Override
             protected String doInBackground(Void... params) {
-                String resultado = new HttpServerConnection().connectToServer("http://www.mocky.io/v2/582f1759260000171165f0b6" + "?data=" + textToSend, 15000);
+                //String resultado = new HttpServerConnection().connectToServer("http://www.mocky.io/v2/582f1759260000171165f0b6" + "?data=" + textToSend, 15000);
+                String resultado = new HttpServerConnection().connectToServer(CONNECTIONADDRESS, 15000, object);
+
                 return resultado;
             }
 

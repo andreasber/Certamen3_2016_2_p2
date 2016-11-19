@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
+
 /**
  * Created by franciscocabezas on 11/18/16.
  */

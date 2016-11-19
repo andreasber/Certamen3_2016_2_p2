@@ -1,0 +1,37 @@
+{
+  "name": "certamenserver",
+  
+"version": "1.0.0",
+  
+"description": "server por certamen 3",
+  
+"main": "index.js",
+  "scripts": {
+    
+"test": "echo \"Error: no test specified\" && exit 1"
+  },
+  
+"repository": {
+    
+"type": "git",
+    
+"url": "git+https://github.com/andreasber/Certamen3_2016_2_p2.git"
+  },
+  
+"author": "Andreas Schewzow",
+  
+"license": 
+"ISC",
+  
+"bugs": {
+    
+"url": "https://github.com/andreasber/Certamen3_2016_2_p2/issues"
+  },
+  
+"homepage": "https://github.com/andreasber/Certamen3_2016_2_p2#readme",
+  
+"dependencies": 
+{
+    "express": "^4.14.0"
+, "mongoose": "^3.6.13", "body-parser":"^1.0.1"}}
+
